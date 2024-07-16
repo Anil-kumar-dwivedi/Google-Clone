@@ -5,13 +5,20 @@ import React, { useState } from "react";
 import "./Search.css";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { useStateValue } from "../StateProvider";
+import { actionTypes } from "../reducer";
 
 function Search({ hideNuttons = false }) {
   const [input, setInput] = useState("");
+  const [{}, dispatch] = useStateValue();
   const navigate = useNavigate();
   const search = (e) => {
     e.preventDefault();
     console.log("Just hit search");
+    dispatch({
+      type: actionTypes.SET_SEARCH_TERM,
+      term: input,
+    });
     navigate("/search");
   };
   return (

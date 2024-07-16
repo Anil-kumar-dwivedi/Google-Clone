@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { StateProvider } from "./StateProvider";
 
 import "./index.css";
+import reducer, { initialState } from "./reducer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
