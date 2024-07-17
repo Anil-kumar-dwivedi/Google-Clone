@@ -28,9 +28,8 @@ function Home() {
           src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
           alt="Google"
         />
-        <div className="home_input_container">
-        </div>
-          <Search hideNuttons />
+        <div className="home_input_container"></div>
+        <Search />
       </div>
     </div>
   );
